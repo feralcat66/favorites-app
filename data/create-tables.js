@@ -15,7 +15,7 @@ async function run() {
             );
         
             CREATE TABLE favorites (
-                id VARCHAR(64) PRIMARY KEY,
+                id SERIAL PRIMARY KEY,
                 pokemon VARCHAR(256) NOT NULL,
                 type_1 VARCHAR(256) NOT NULL,
                 base_experience INTEGER NOT NULL,
