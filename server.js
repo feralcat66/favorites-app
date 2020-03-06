@@ -70,7 +70,7 @@ app.post('/api/me/favorites', async(req, res) => {
             pokemon,
             type_1,
             base_experience,
-        } = req.body.results;
+        } = req.body;
 
         const newFavorites = await client.query(`
             INSERT INTO favorites (pokemon, type_1, base_experience, user_id)
