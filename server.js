@@ -70,6 +70,7 @@ app.post('/api/me/favorites', async(req, res) => {
             pokemon,
             type_1,
             base_experience,
+            url_image
         } = req.body.results;
 
         const newFavorites = await client.query(`
@@ -79,7 +80,8 @@ app.post('/api/me/favorites', async(req, res) => {
         `, [
             pokemon, 
             type_1, 
-            base_experience, 
+            base_experience,
+            url_image, 
             req.userId,
         ]);
 
