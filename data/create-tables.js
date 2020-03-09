@@ -19,6 +19,7 @@ async function run() {
                 pokemon VARCHAR(256) NOT NULL,
                 type_1 VARCHAR(256) NOT NULL,
                 base_experience INTEGER NOT NULL,
+                url_image VARCHAR(256) NOT NULL,
                 user_id INTEGER NOT NULL
             );
         `);
