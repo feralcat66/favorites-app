@@ -73,8 +73,8 @@ app.post('/api/me/favorites', async(req, res) => {
         } = req.body.results;
 
         const newFavorites = await client.query(`
-            INSERT INTO favorites (pokemon, type_1, base_experience, user_id)
-            values ($1, $2, $3, $4)
+            INSERT INTO favorites (pokemon, type_1, base_experience, url_image, user_id)
+            values ($1, $2, $3, $4, $5)
             returning *
         `, [
             pokemon, 
